@@ -1,0 +1,347 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+@import "formulario";
+@import "portafolio";
+@import "variables";
+@import "header";
+@import "footer";
+
+/*ajustes de clases de bootstrap*/
+.navbar-nav {
+    width: 100%;
+    justify-content: flex-end;
+}
+
+/*estilos para etiquetas*/
+h1 {
+    font-size: 55px;
+    font-family: $familiaFuente;
+    font-weight: 700;
+}
+
+h2 {
+    @extend h1;
+    font-size: 35px;
+}
+
+h3 {
+    @extend h1;
+    font-size: 25px;
+}
+
+h4 {
+    @extend h1;
+    font-size: 20px;
+}
+
+p {
+    font-size: 16px;
+    font-family: $familiaFuente;
+    font-weight: 400;
+}
+
+/*estilos generales*/
+.button {
+    border-radius: 5px;
+    border: none;
+    padding: 10px 15px;
+    width: fit-content;
+    font-size: 16px;
+    font-family: $familiaFuente;
+    font-weight: 500;
+}
+.buttonWhite {
+    @extend .button;
+    color: black;
+    background-color: map-get($map: $colorsCorp, $key: colorCorpSec);
+    transition-duration: 0.1s;
+    &:hover {
+        background-color: rgba(0,0,0,0.0);
+        border: map-get($map: $colorsCorp, $key: colorCorpPri) solid 2px;
+        color: map-get($map: $colorsCorp, $key: colorCorpPri);
+    }
+}
+
+.buttonRed {
+    @extend .button;
+    color: map-get($map: $colorsCorp, $key: colorCorpSec);
+    background-color: map-get($map: $colorsCorp, $key: colorCorpPri);
+    transition-duration: 0.1s;
+    &:hover {
+        background-color: rgba(0,0,0,0.0);
+        border: map-get($map: $colorsCorp, $key: colorCorpPri) solid 2px;
+        color: map-get($map: $colorsCorp, $key: colorCorpPri);
+    }
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    a {
+        padding-left: 70px;
+        font-family: $familiaFuente;
+        font-weight: 500;
+        font-size: 16px;
+        color: map-get($map: $colorsCorp, $key: colorCorpSec);
+        text-decoration: none;
+    }
+}
+
+#logo {
+    @include sizes(10%, 70px);
+}
+
+.hero-section-first {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.content-column {
+    max-width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 35px;
+}
+
+#first-img-carlos {
+    max-width: 600px;
+    width: 50%;
+}
+
+.first-img-section {
+    max-width: 500px;
+    @include sizes(25%, 250px);
+}
+
+.seccion-fondo-negro {
+    padding: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.seccion-fondo-blanco {
+    padding: 50px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.animacionfade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+.AnimacionBarridoyFade {
+    animation-name: BarridoyFade;
+    animation-duration: 1s;
+    position: relative;
+}
+
+/*estilos para página de inicio*/
+.seccion-servicio {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenedor-tarjetas-servicios {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 25px;
+}
+
+.tarjetas-servicios {
+    text-align: center;
+    @include sizes(30%, 250px);
+
+}
+
+.tarjetas-servicios img {
+    max-width: 100%;
+    padding-bottom: 15px;
+}
+
+/*estilos para página sobre mi*/
+
+.seccion-fondo-blanco-sobremi {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.imagenes-seccion-sobremi {
+    width: 50%;
+}
+
+.content-column-sobremi {
+    box-sizing: border-box;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+}
+
+/* Animaciones */
+@keyframes fade {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes BarridoyFade {
+    from {
+        left: 100px;
+        opacity: 0.0;
+    }
+    to {
+        left: 0;
+        opacity: 1.0;
+    }
+}
+
+@media screen and (max-width: 360px) {
+
+    .nav-item {
+        margin-top: 25px;
+    }
+
+    /*estilos para etiquetas*/
+    h1 {
+        font-size: 45px;
+    }
+
+    h2 {
+        font-size: 35px;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    h4 {
+        font-size: 20px;
+    }
+
+    /* Estilos generales */
+    #logo {
+        width: 50%;
+
+    }
+
+    nav {
+        padding-top: 15px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        a {
+            text-align: center;
+            padding: 10px;
+            font-family: $familiaFuente;
+            font-weight: 500;
+            font-size: 18px;
+            color: white;
+            text-decoration: none;
+        }
+    }
+
+    .hero-section-first {
+        flex-flow: row wrap-reverse;
+        justify-content: start;
+    }
+
+    .content-column {
+        max-width: 100%;
+        padding: 25px;
+    }
+
+    #first-img-carlos {
+        max-width: 600px;
+        min-width: 250px;
+        width: 50%;
+    }
+
+    #first-img-carlos {
+        width: 100%;
+        border-bottom: map-get($map: $colorsCorp, $key: colorCorpPri) solid 4px;
+    }
+
+    .first-img-section {
+        width: 100%;
+        border-bottom: map-get($map: $colorsCorp, $key: colorCorpPri) solid 4px;
+    }
+
+    .seccion-fondo-blanco {
+        padding: 25px 0 0;
+        justify-content: space-evenly;
+    }
+
+    .seccion-fondo-blanco img {
+        width: 90%;
+    }
+
+    .seccion-fondo-negro {
+        padding: 25px 0 0;
+        justify-content: space-evenly;
+        img {
+            width: 90%;
+        }
+        iframe {
+            padding: 25px;
+        }
+    }
+
+    .reverse {
+        display: flex;
+        flex-wrap: wrap-reverse;
+    }
+
+    /*estilos para página de inicio*/
+    .seccion-servicio {
+        padding: 25px;
+    }
+
+    .contenedor-tarjetas-servicios {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .tarjetas-servicios {
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+    .imagenes-seccion-sobremi {
+        max-width: 100%;
+    }
+
+    /* estilos sobre mi */
+    .content-column-sobremi {
+        padding: 25px;
+        width: 100%;
+    }
+
+    .imagenes-seccion-sobremi {
+        width: 100%;
+    }
+}

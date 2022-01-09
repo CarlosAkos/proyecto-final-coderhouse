@@ -1,0 +1,434 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0; }
+
+a,
+li,
+ul {
+  text-decoration: none;
+  color: #bd0202;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; }
+
+/*estilos de formulario*/
+input[type=text],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 5px 0 15px;
+  box-sizing: border-box;
+  resize: none; }
+
+input[placeholder],
+textarea[placeholder] {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; }
+
+input[type=submit] {
+  border-radius: 5px;
+  border: none;
+  background-color: white;
+  padding: 10px 15px;
+  width: 40%;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; }
+
+label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 15px; }
+
+@media screen and (max-width: 360px) {
+  /* estilos de formulario */
+  .formulario {
+    width: 90%;
+    margin-bottom: 25px; } }
+
+/*estilos para página portafolio*/
+.seccion-fondo-negro-portafolio {
+  padding: 25px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center; }
+
+.galeria {
+  margin: 15px;
+  width: 100%;
+  height: 800px;
+  display: grid;
+  grid-template-areas: "schuhe schuhe pfeliz" "schuhe schuhe codigolab" "remanso fmarketing fmarketing" "mpainting fmarketing fmarketing";
+  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1%; }
+
+#schuhe {
+  grid-area: schuhe;
+  background-image: url("../img/portada-app-zapatos.png");
+  background-size: cover;
+  background-position: center; }
+
+#pfeliz {
+  grid-area: pfeliz;
+  background-image: url("../img/proyecto-elperezosofeliz.png");
+  background-size: cover;
+  background-position: center; }
+
+#codigolab {
+  grid-area: codigolab;
+  background-image: url("../img/proyecto-codigolab.png");
+  background-size: cover;
+  background-position: center; }
+
+#remanso {
+  grid-area: remanso;
+  background-image: url("../img/proyecto-remansolascondes.png");
+  background-size: cover;
+  background-position: center; }
+
+#mpainting {
+  grid-area: mpainting;
+  background-image: url("../img/proyecto-mattepaiting.png");
+  background-size: cover;
+  background-position: center; }
+
+#fmarketing {
+  grid-area: fmarketing;
+  background-image: url("../img/proyecto-flavoredmarketing.png");
+  background-size: cover;
+  background-position: center; }
+
+#fmarketing img {
+  width: 100%; }
+
+/* tranformaciones */
+.elementodegaleria {
+  filter: blur(1px) grayscale(100%);
+  transition-duration: 0.5s; }
+
+.elementodegaleria:hover {
+  filter: blur(0) grayscale(0%); }
+
+@media screen and (max-width: 360px) {
+  /* estilos de galeria */
+  .elementodegaleria {
+    filter: blur(0) grayscale(0); }
+  .galeria {
+    margin: 25px;
+    width: 100%;
+    height: 1080px;
+    display: grid;
+    grid-template-areas: "schuhe" "pfeliz" "codigolab" "remanso" "fmarketing" "mpainting";
+    grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+    grid-template-columns: 100%;
+    gap: 5px; }
+  .seccion-fondo-negro-portafolio {
+    text-align: center; } }
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px; }
+
+@media screen and (max-width: 360px) {
+  header {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px; } }
+
+footer {
+  border-top: solid #bd0202 5px;
+  display: flex;
+  padding: 50px;
+  justify-content: space-between;
+  flex-flow: row wrap; }
+  footer div {
+    max-width: 35%; }
+  footer a,
+  footer li,
+  footer ul {
+    text-decoration: none;
+    color: #bd0202;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400; }
+  footer img {
+    width: 50px; }
+
+@media screen and (max-width: 360px) {
+  footer {
+    padding: 25px;
+    align-items: center;
+    flex-flow: column; }
+    footer div {
+      max-width: 100%;
+      text-align: center; }
+    footer img {
+      margin: 0 15px 15px; }
+    footer a,
+    footer li,
+    footer ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 0 15px; } }
+
+/*ajustes de clases de bootstrap*/
+.navbar-nav {
+  width: 100%;
+  justify-content: flex-end; }
+
+/*estilos para etiquetas*/
+h1, h2, h3, h4 {
+  font-size: 55px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700; }
+
+h2 {
+  font-size: 35px; }
+
+h3 {
+  font-size: 25px; }
+
+h4 {
+  font-size: 20px; }
+
+p {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400; }
+
+/*estilos generales*/
+.button, .buttonWhite, .buttonRed {
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+  width: fit-content;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500; }
+
+.buttonWhite {
+  color: black;
+  background-color: white;
+  transition-duration: 0.1s; }
+  .buttonWhite:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: #bd0202 solid 2px;
+    color: #bd0202; }
+
+.buttonRed {
+  color: white;
+  background-color: #bd0202;
+  transition-duration: 0.1s; }
+  .buttonRed:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: #bd0202 solid 2px;
+    color: #bd0202; }
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap; }
+  nav a {
+    padding-left: 70px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    text-decoration: none; }
+
+#logo {
+  width: 10%;
+  min-width: 70px; }
+
+.hero-section-first {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.content-column {
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 35px; }
+
+#first-img-carlos {
+  max-width: 600px;
+  width: 50%; }
+
+.first-img-section {
+  max-width: 500px;
+  width: 25%;
+  min-width: 250px; }
+
+.seccion-fondo-negro {
+  padding: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.seccion-fondo-blanco {
+  padding: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.animacionfade {
+  animation-name: fade;
+  animation-duration: 1s; }
+
+.AnimacionBarridoyFade {
+  animation-name: BarridoyFade;
+  animation-duration: 1s;
+  position: relative; }
+
+/*estilos para página de inicio*/
+.seccion-servicio {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.contenedor-tarjetas-servicios {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 25px; }
+
+.tarjetas-servicios {
+  text-align: center;
+  width: 30%;
+  min-width: 250px; }
+
+.tarjetas-servicios img {
+  max-width: 100%;
+  padding-bottom: 15px; }
+
+/*estilos para página sobre mi*/
+.seccion-fondo-blanco-sobremi {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+
+.imagenes-seccion-sobremi {
+  width: 50%; }
+
+.content-column-sobremi {
+  box-sizing: border-box;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%; }
+
+/* Animaciones */
+@keyframes fade {
+  from {
+    opacity: 0.0; }
+  to {
+    opacity: 1.0; } }
+
+@keyframes BarridoyFade {
+  from {
+    left: 100px;
+    opacity: 0.0; }
+  to {
+    left: 0;
+    opacity: 1.0; } }
+
+@media screen and (max-width: 360px) {
+  .nav-item {
+    margin-top: 25px; }
+  /*estilos para etiquetas*/
+  h1, h2, h3, h4 {
+    font-size: 45px; }
+  h2 {
+    font-size: 35px; }
+  h3 {
+    font-size: 25px; }
+  h4 {
+    font-size: 20px; }
+  /* Estilos generales */
+  #logo {
+    width: 50%; }
+  nav {
+    padding-top: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; }
+    nav a {
+      text-align: center;
+      padding: 10px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: white;
+      text-decoration: none; }
+  .hero-section-first {
+    flex-flow: row wrap-reverse;
+    justify-content: start; }
+  .content-column {
+    max-width: 100%;
+    padding: 25px; }
+  #first-img-carlos {
+    max-width: 600px;
+    min-width: 250px;
+    width: 50%; }
+  #first-img-carlos {
+    width: 100%;
+    border-bottom: #bd0202 solid 4px; }
+  .first-img-section {
+    width: 100%;
+    border-bottom: #bd0202 solid 4px; }
+  .seccion-fondo-blanco {
+    padding: 25px 0 0;
+    justify-content: space-evenly; }
+  .seccion-fondo-blanco img {
+    width: 90%; }
+  .seccion-fondo-negro {
+    padding: 25px 0 0;
+    justify-content: space-evenly; }
+    .seccion-fondo-negro img {
+      width: 90%; }
+    .seccion-fondo-negro iframe {
+      padding: 25px; }
+  .reverse {
+    display: flex;
+    flex-wrap: wrap-reverse; }
+  /*estilos para página de inicio*/
+  .seccion-servicio {
+    padding: 25px; }
+  .contenedor-tarjetas-servicios {
+    justify-content: center;
+    padding: 0; }
+  .tarjetas-servicios {
+    width: 100%;
+    padding-bottom: 25px; }
+  .imagenes-seccion-sobremi {
+    max-width: 100%; }
+  /* estilos sobre mi */
+  .content-column-sobremi {
+    padding: 25px;
+    width: 100%; }
+  .imagenes-seccion-sobremi {
+    width: 100%; } }

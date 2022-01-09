@@ -1,0 +1,47 @@
+@import "variables";
+
+footer {
+    border-top: solid map-get($map: $colorsCorp, $key: colorCorpPri) 5px;
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    div {
+        max-width: 35%;
+    }
+    a,
+    li,
+    ul {
+        text-decoration: none;
+        color: map-get($map: $colorsCorp, $key: colorCorpPri);
+        font-size: 18px;
+        font-family: $familiaFuente;
+        font-weight: 400;
+    }
+    img{
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 360px){
+    footer {
+        padding: 25px;
+        align-items: center;
+        flex-flow: column;
+        div {
+            max-width: 100%;
+            text-align: center;
+        }
+        img {
+            margin: 0 15px 15px;
+        }
+        a,
+        li,
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0 0 15px;
+        }
+    }
+
+}

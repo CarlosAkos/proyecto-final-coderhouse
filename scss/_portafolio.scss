@@ -1,0 +1,99 @@
+@import "variables";
+
+/*estilos para página portafolio*/
+.seccion-fondo-negro-portafolio {
+    padding: 25px;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.galeria {
+    margin: 15px;
+    width: 100%;
+    height: 800px;
+    display: grid;
+    grid-template-areas: "schuhe schuhe pfeliz" "schuhe schuhe codigolab" "remanso fmarketing fmarketing" "mpainting fmarketing fmarketing";
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1%;
+}
+
+#schuhe {
+    grid-area: schuhe;
+    background-image: url("../img/portada-app-zapatos.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#pfeliz {
+    grid-area: pfeliz;
+    background-image: url("../img/proyecto-elperezosofeliz.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#codigolab {
+    grid-area: codigolab;
+    background-image: url("../img/proyecto-codigolab.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#remanso {
+    grid-area: remanso;
+    background-image: url("../img/proyecto-remansolascondes.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#mpainting {
+    grid-area: mpainting;
+    background-image: url("../img/proyecto-mattepaiting.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#fmarketing {
+    grid-area: fmarketing;
+    background-image: url("../img/proyecto-flavoredmarketing.png");
+    background-size: cover;
+    background-position: center;
+}
+
+#fmarketing img {
+    width: 100%;
+}
+
+/* tranformaciones */
+.elementodegaleria {
+    filter: blur(1px) grayscale(100%);
+    transition-duration: 0.5s;
+}
+
+.elementodegaleria:hover {
+    filter: blur(0) grayscale(0%);
+}
+
+@media screen and (max-width: 360px) {
+    /* estilos de galeria */
+    .elementodegaleria {
+        filter: blur(0) grayscale(0);
+    }
+    .galeria {
+        margin: 25px;
+        width: 100%;
+        height: 1080px;
+        display: grid;
+        grid-template-areas: "schuhe" "pfeliz" "codigolab" "remanso" "fmarketing" "mpainting";
+        grid-template-rows: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+        grid-template-columns: 100%;
+        gap: 5px;
+    }
+
+    .seccion-fondo-negro-portafolio {
+        text-align: center;
+    }
+}

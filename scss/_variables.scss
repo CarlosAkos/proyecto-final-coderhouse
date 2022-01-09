@@ -1,0 +1,11 @@
+// Variables
+$familiaFuente: 'Montserrat', sans-serif;
+$colorsCorp: (
+    colorCorpPri: #bd0202,
+    colorCorpSec: white,
+);
+
+@mixin sizes($width, $min-width) {
+    width: $width;
+    min-width: $min-width;
+}
