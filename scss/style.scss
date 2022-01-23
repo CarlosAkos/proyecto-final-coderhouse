@@ -43,7 +43,18 @@ p {
     font-weight: 400;
 }
 
-/*estilos generales*/
+li, ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0 0 15px;
+        a:hover{
+            color: #ff4848;
+        }       
+    }
+
+
+
+    /*estilos generales*/
 .button {
     border-radius: 5px;
     border: none;
@@ -93,7 +104,7 @@ nav {
 }
 
 #logo {
-    @include sizes(10%, 70px);
+    @include sizes(8%, 70px);
 }
 
 .hero-section-first {
@@ -105,11 +116,15 @@ nav {
 }
 
 .content-column {
-    max-width: 40%;
+    max-width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 35px;
+    padding: 35px;
+}
+
+.video{
+    max-width: 50%;
 }
 
 #first-img-carlos {
@@ -167,6 +182,7 @@ nav {
 .tarjetas-servicios {
     text-align: center;
     @include sizes(30%, 250px);
+    margin:25px 10px 25px 10px;
 
 }
 
@@ -185,8 +201,20 @@ nav {
     flex-wrap: wrap;
 }
 
-.imagenes-seccion-sobremi {
+.imagenes-seccion-sobremi-1 {
     width: 50%;
+    height: 550px;
+    background-image: url("../img/imagen-sobremi-flor-metalica.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagenes-seccion-sobremi-2 {
+    width: 50%;
+    height: 550px;
+    background-image: url("../img/imagen-sobremi.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .content-column-sobremi {
@@ -196,6 +224,30 @@ nav {
     flex-direction: column;
     justify-content: center;
     width: 50%;
+}
+
+.imagenes-seccion-ui-ux {
+    width: 40%;
+    height: 350px;
+    background-image: url("../img/imagen-diseno-ui-ux.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagenes-seccion-desarrollo-web {
+    width: 40%;
+    height: 350px;
+    background-image: url("../img/imagen-desarrollo-web.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.imagenes-seccion-diseno-grafico {
+    width: 40%;
+    height: 350px;
+    background-image: url("../img/imagen-diseno-grafico.png");
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 /* Animaciones */
@@ -216,6 +268,75 @@ nav {
     to {
         left: 0;
         opacity: 1.0;
+    }
+}
+
+@media screen and (max-width: 830px){
+    .content-column {
+        max-width: 100%;
+        padding: 25px;
+    }
+    .video{
+        max-width: 100%;
+    }
+    .tarjetas-servicios {
+        width: 90%;
+    }
+
+    .contenedor-tarjetas-servicios{
+        justify-content: center;
+    }
+
+    //Página sobre mi
+    .imagenes-seccion-sobremi-1 {
+        width: 85%;
+        height: 350px;
+    }
+    
+    .imagenes-seccion-sobremi-2 {
+        width: 85%;
+        height: 350px
+    }
+    
+    .content-column-sobremi {
+        width: 80%;
+        padding: 25px;
+    }
+
+    .seccion-fondo-blanco-sobremi {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .reverse-m {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    // Pagina de servicios
+    .imagenes-seccion-ui-ux {
+        width: 85%;
+        height: 350px;
+        background-image: url("../img/imagen-diseno-ui-ux.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .imagenes-seccion-desarrollo-web {
+        width: 85%;
+        height: 350px;
+        background-image: url("../img/imagen-desarrollo-web.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .imagenes-seccion-diseno-grafico {
+        width: 85%;
+        height: 350px;
+        background-image: url("../img/imagen-diseno-grafico.png");
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 }
 
@@ -244,7 +365,7 @@ nav {
 
     /* Estilos generales */
     #logo {
-        width: 50%;
+        width: 40%;
 
     }
 
@@ -273,6 +394,10 @@ nav {
     .content-column {
         max-width: 100%;
         padding: 25px;
+    }
+
+    .video{
+        max-width: 100%;
     }
 
     #first-img-carlos {
@@ -341,7 +466,39 @@ nav {
         width: 100%;
     }
 
-    .imagenes-seccion-sobremi {
+    .imagenes-seccion-sobremi-1{
+        height: 250px;
         width: 100%;
     }
+
+    .imagenes-seccion-sobremi-2{
+        height: 250px;
+        width: 100%;
+    }
+
+    // estilos página servicios
+    .imagenes-seccion-ui-ux {
+        width: 100%;
+        height: 250px;
+        background-image: url("../img/imagen-diseno-ui-ux.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .imagenes-seccion-desarrollo-web {
+        width: 100%;
+        height: 250px;
+        background-image: url("../img/imagen-desarrollo-web.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    
+    .imagenes-seccion-diseno-grafico {
+        width: 100%;
+        height: 250px;
+        background-image: url("../img/imagen-diseno-grafico.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
 }
+

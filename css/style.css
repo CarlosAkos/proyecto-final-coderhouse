@@ -34,7 +34,12 @@ input[type=submit] {
   width: 40%;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  font-weight: 500; }
+  font-weight: 500;
+  transition-duration: 0.1s; }
+  input[type=submit]:hover {
+    background-color: rgba(0, 0, 0, 0);
+    border: #bd0202 solid 2px;
+    color: #bd0202; }
 
 label {
   font-family: "Montserrat", sans-serif;
@@ -113,7 +118,7 @@ label {
 .elementodegaleria:hover {
   filter: blur(0) grayscale(0%); }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 830px) {
   /* estilos de galeria */
   .elementodegaleria {
     filter: blur(0) grayscale(0); }
@@ -137,7 +142,7 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 15px; }
+  padding: 10px; }
 
 @media screen and (max-width: 360px) {
   header {
@@ -165,6 +170,21 @@ footer {
     font-weight: 400; }
   footer img {
     width: 50px; }
+
+@media screen and (max-width: 830px) {
+  footer {
+    padding: 25px;
+    align-items: center;
+    flex-flow: column; }
+    footer div {
+      max-width: 100%;
+      text-align: center; }
+    footer a,
+    footer li,
+    footer ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0 0 15px; } }
 
 @media screen and (max-width: 360px) {
   footer {
@@ -208,6 +228,13 @@ p {
   font-family: "Montserrat", sans-serif;
   font-weight: 400; }
 
+li, ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 15px; }
+  li a:hover, ul a:hover {
+    color: #ff4848; }
+
 /*estilos generales*/
 .button, .buttonWhite, .buttonRed {
   border-radius: 5px;
@@ -250,7 +277,7 @@ nav {
     text-decoration: none; }
 
 #logo {
-  width: 10%;
+  width: 8%;
   min-width: 70px; }
 
 .hero-section-first {
@@ -261,11 +288,14 @@ nav {
   justify-content: space-around; }
 
 .content-column {
-  max-width: 40%;
+  max-width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 35px; }
+  padding: 35px; }
+
+.video {
+  max-width: 50%; }
 
 #first-img-carlos {
   max-width: 600px;
@@ -315,7 +345,8 @@ nav {
 .tarjetas-servicios {
   text-align: center;
   width: 30%;
-  min-width: 250px; }
+  min-width: 250px;
+  margin: 25px 10px 25px 10px; }
 
 .tarjetas-servicios img {
   max-width: 100%;
@@ -329,8 +360,19 @@ nav {
   justify-content: space-between;
   flex-wrap: wrap; }
 
-.imagenes-seccion-sobremi {
-  width: 50%; }
+.imagenes-seccion-sobremi-1 {
+  width: 50%;
+  height: 550px;
+  background-image: url("../img/imagen-sobremi-flor-metalica.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.imagenes-seccion-sobremi-2 {
+  width: 50%;
+  height: 550px;
+  background-image: url("../img/imagen-sobremi.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 .content-column-sobremi {
   box-sizing: border-box;
@@ -339,6 +381,27 @@ nav {
   flex-direction: column;
   justify-content: center;
   width: 50%; }
+
+.imagenes-seccion-ui-ux {
+  width: 40%;
+  height: 350px;
+  background-image: url("../img/imagen-diseno-ui-ux.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.imagenes-seccion-desarrollo-web {
+  width: 40%;
+  height: 350px;
+  background-image: url("../img/imagen-desarrollo-web.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.imagenes-seccion-diseno-grafico {
+  width: 40%;
+  height: 350px;
+  background-image: url("../img/imagen-diseno-grafico.png");
+  background-size: cover;
+  background-repeat: no-repeat; }
 
 /* Animaciones */
 @keyframes fade {
@@ -355,6 +418,51 @@ nav {
     left: 0;
     opacity: 1.0; } }
 
+@media screen and (max-width: 830px) {
+  .content-column {
+    max-width: 100%;
+    padding: 25px; }
+  .video {
+    max-width: 100%; }
+  .tarjetas-servicios {
+    width: 90%; }
+  .contenedor-tarjetas-servicios {
+    justify-content: center; }
+  .imagenes-seccion-sobremi-1 {
+    width: 85%;
+    height: 350px; }
+  .imagenes-seccion-sobremi-2 {
+    width: 85%;
+    height: 350px; }
+  .content-column-sobremi {
+    width: 80%;
+    padding: 25px; }
+  .seccion-fondo-blanco-sobremi {
+    flex-direction: column;
+    align-items: center; }
+  .reverse-m {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; }
+  .imagenes-seccion-ui-ux {
+    width: 85%;
+    height: 350px;
+    background-image: url("../img/imagen-diseno-ui-ux.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .imagenes-seccion-desarrollo-web {
+    width: 85%;
+    height: 350px;
+    background-image: url("../img/imagen-desarrollo-web.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .imagenes-seccion-diseno-grafico {
+    width: 85%;
+    height: 350px;
+    background-image: url("../img/imagen-diseno-grafico.png");
+    background-size: cover;
+    background-repeat: no-repeat; } }
+
 @media screen and (max-width: 360px) {
   .nav-item {
     margin-top: 25px; }
@@ -369,7 +477,7 @@ nav {
     font-size: 20px; }
   /* Estilos generales */
   #logo {
-    width: 50%; }
+    width: 40%; }
   nav {
     padding-top: 15px;
     width: 100%;
@@ -390,6 +498,8 @@ nav {
   .content-column {
     max-width: 100%;
     padding: 25px; }
+  .video {
+    max-width: 100%; }
   #first-img-carlos {
     max-width: 600px;
     min-width: 250px;
@@ -430,5 +540,27 @@ nav {
   .content-column-sobremi {
     padding: 25px;
     width: 100%; }
-  .imagenes-seccion-sobremi {
-    width: 100%; } }
+  .imagenes-seccion-sobremi-1 {
+    height: 250px;
+    width: 100%; }
+  .imagenes-seccion-sobremi-2 {
+    height: 250px;
+    width: 100%; }
+  .imagenes-seccion-ui-ux {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/imagen-diseno-ui-ux.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .imagenes-seccion-desarrollo-web {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/imagen-desarrollo-web.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .imagenes-seccion-diseno-grafico {
+    width: 100%;
+    height: 250px;
+    background-image: url("../img/imagen-diseno-grafico.png");
+    background-size: cover;
+    background-repeat: no-repeat; } }

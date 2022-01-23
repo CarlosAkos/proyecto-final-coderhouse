@@ -36,7 +36,14 @@ input[type=submit] {
     font-size: 18px;
     font-family: $familiaFuente;
     font-weight: 500;
+    transition-duration: 0.1s;
+    &:hover{
+        background-color: rgba(0,0,0,0.0);
+        border: map-get($map: $colorsCorp, $key: colorCorpPri) solid 2px;
+        color: map-get($map: $colorsCorp, $key: colorCorpPri);
+    }
 }
+
 
 label {
     font-family: $familiaFuente;
